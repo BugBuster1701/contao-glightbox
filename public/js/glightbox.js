@@ -2874,8 +2874,8 @@
               var _slideTriggerNode$get;
               maxHeightValue = (_slideTriggerNode$get = slideTriggerNode.getAttribute('data-height')) !== null && _slideTriggerNode$get !== void 0 ? _slideTriggerNode$get : maxHeightValue;
             }
-            _imgNode.setAttribute('style', "max-height: calc(".concat(maxHeightValue, " - ").concat(descHeight, "px)"));
-            description.setAttribute('style', "max-width: ".concat(_imgNode.offsetWidth, "px;"));
+            _imgNode.style = "max-height: calc(".concat(maxHeightValue, " - ").concat(descHeight, "px)");
+            description.style = "max-width: ".concat(_imgNode.offsetWidth, "px;");
           }
         }
         if (video) {
@@ -2915,14 +2915,14 @@
               width: vwidth * _ratio,
               height: vheight * _ratio
             };
-            video.parentNode.setAttribute('style', "max-width: ".concat(vsize.width, "px"));
+            video.parentNode.style = "max-width: ".concat(vsize.width, "px");
             if (descriptionResize) {
-              description.setAttribute('style', "max-width: ".concat(vsize.width, "px;"));
+              description.style = "max-width: ".concat(vsize.width, "px;");
             }
           } else {
             video.parentNode.style.maxWidth = "".concat(videoWidth);
             if (descriptionResize) {
-              description.setAttribute('style', "max-width: ".concat(videoWidth, ";"));
+              description.style = "max-width: ".concat(videoWidth, ";");
             }
           }
         }

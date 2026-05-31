@@ -605,8 +605,8 @@
     }, {
       key: "zoomOut",
       value: function zoomOut() {
-        this.img.parentNode.setAttribute('style', '');
-        this.img.setAttribute('style', this.img.getAttribute('data-style'));
+        this.img.parentNode.style = '';
+        this.img.style = this.img.getAttribute('data-style') ? this.img.getAttribute('data-style') : '';
         this.slide.classList.remove('zoomed');
         this.zoomedIn = false;
         this.currentX = null;
